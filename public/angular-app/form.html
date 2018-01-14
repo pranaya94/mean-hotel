@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	  <title>Form</title>
+</head>
+<body>
+
+	<div ng-controller="MyController as vm">
+		<form name="vm.myForm" ng-submit="vm.add()">
+			<input type="text" name="name" ng-pattern ="/^[0-9]{1,5}$/" ng-model="name">				
+		<div ng-show ="vm.myForm.name.$dirty && vm.myForm.name.$invalid && vm.isSubmitted">
+			This field requires 2-3 digits
+		</div>
+		<button type="submit">Add data</button>
+		</form>
+	</div>
+
+<script src="../../node_modules/angular/angular.js"></script>
+<script>
+	angular.module('myApp',[]).controller('MyController',MyController);
+	function MyController(){
+		var vm = this;
+		vm.message = 'hello';
+		vm.isSubmitted = false;
+
+		vm.add = function(){			
+			if(vm.myForm.$valid){
+				console.log('Added to database...');
+			}else {
+				vm.isSubmitted = true;
+			}
+		}
+	}
+</script>
+</body>

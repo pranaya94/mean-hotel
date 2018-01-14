@@ -1,0 +1,34 @@
+{
+  "name": "mean-app",
+  "version": "1.0.0",
+  "description": "MEAN stack application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranaya94/mean-hotel.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Pranaya Tomar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranaya94/mean-hotel/issues"
+  },
+  "homepage": "https://github.com/pranaya94/mean-hotel#readme",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.8"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}

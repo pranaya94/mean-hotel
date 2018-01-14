@@ -1,0 +1,10 @@
+<h1>Information on {{ vm.hotel.name}} - <hotel-rating stars="vm.stars"></hotel-rating></h1>
+<p>{{ vm.hotel.description}}</p>
+<p>The hotel offers the following services</p> 
+<ul ng-repeat="service in vm.hotel.services"">
+	<li>{{service }}</li>
+</ul>
+
+<form ng-controller="reviewForm" >
+Your Name : <input type="text" ng-model="reviewer">Review : <input type="text" ng-model="newReview">
+</form>
