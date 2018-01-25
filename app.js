@@ -18,7 +18,7 @@ app.use('/node_modules',express.static(path.join(__dirname,'/node_modules')));
 
 //enable parsing of posted forms
 app.use(bodyParser.urlencoded({extended : false})); //means need only strings and arrays and no warning
-
+app.use(bodyParser.json());
 
 app.use('/api',routes);
 

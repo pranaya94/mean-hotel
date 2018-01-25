@@ -24,3 +24,4 @@ process.on('SIGINT',function(){
 
 // BRING IN SCHEMAS AND MODELS
 require('./hotels.model.js');
+require('./users.model.js');

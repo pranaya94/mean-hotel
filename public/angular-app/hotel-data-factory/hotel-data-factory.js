@@ -3,7 +3,8 @@ angular.module('meanhotel').factory('hotelDataFactory',hotelDataFactory);
 function hotelDataFactory($http){
 	return{
 		hotelList : hotelList,
-		hotelDisplay: hotelDisplay
+		hotelDisplay: hotelDisplay,
+		postReview: postReview
 	};
 
 	function hotelList(){
@@ -14,8 +15,11 @@ function hotelDataFactory($http){
 		return $http.get('/api/hotels/' + id).then(complete).catch(failed);
 	}
 
+	function postReview(id,postData){
+		return $http.post('api/hotels/' + id + '/reviews',postData).then(complete).catch(failed);
+	}
 	function complete(response){
-		return response.data;
+		return response;
 	}
 
 	function failed(error){

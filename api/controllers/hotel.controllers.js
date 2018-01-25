@@ -5,7 +5,7 @@ module.exports.hotelsGetAll = function(req,res){
 	var offset = 0;
 	var count = 5;
 	var maxCount = 10;
-
+	console.log("requested by : " + req.user);
 	var runGeoQuery = function(req,res){
 
 		var lng = parseFloat(req.query.lng);
